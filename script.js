@@ -38,13 +38,13 @@ document.querySelectorAll('.rating').forEach(starContainer => {
         starContainer.textContent = '★'.repeat(savedRating) + '☆'.repeat(5 - savedRating);
     }
 
-    starContainer.addEventListener('click', () => {
+    starContainer.addEventListener('click', (event) => {
         const newRating = prompt("Califica del 1 al 5:"); // Solicita calificación
         if (newRating >= 1 && newRating <= 5) {
             // Guardar calificación en LocalStorage
             localStorage.setItem(`rating-${ratingId}`, newRating);
             // Actualizar la interfaz
-            starContainer.textContent = '★'.repeat(newRating) + '☆'.repeat(5 - newRating);
+            event.currentTarget.textContent = '★'.repeat(newRating) + '☆'.repeat(5 - newRating);
             console.log(`Guardando calificación para ${ratingId}: ${newRating}`);
         } else {
             alert("Por favor, ingresa un número entre 1 y 5.");
@@ -67,7 +67,7 @@ document.querySelectorAll('.like-button, .dislike-button').forEach(button => {
         }
     }
 
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
         // Guardar feedback en LocalStorage
         localStorage.setItem(`feedback-${ratingId}`, feedbackType);
         console.log(`Feedback para ${ratingId}: ${feedbackType}`);
@@ -89,4 +89,3 @@ const swiper = new Swiper('.swiper-container', {
         delay: 8000, // Cambia automáticamente cada 8 segundos
     },
 });
-
