@@ -1,3 +1,4 @@
+// Obtener ratings de IMDb para cada serie
 const series = [
     { name: "Breaking Bad", apiName: "Breaking+Bad" },
     { name: "Better Call Saul", apiName: "Better+Call+Saul" },
@@ -27,29 +28,53 @@ series.forEach(serie => {
         .catch(err => console.error(`Error fetching data for ${serie.name}: ${err.message}`));
 });
 
-// Configuración de las calificaciones interactivas
+// Configuración de las calificaciones interactivas con persistencia
 document.querySelectorAll('.rating').forEach(starContainer => {
+    const ratingId = starContainer.dataset.id; // Identificador único de la serie
+
+    // Cargar calificación guardada (si existe)
+    const savedRating = localStorage.getItem(`rating-${ratingId}`);
+    if (savedRating) {
+        starContainer.textContent = '★'.repeat(savedRating) + '☆'.repeat(5 - savedRating);
+    }
+
     starContainer.addEventListener('click', () => {
-        const ratingId = starContainer.dataset.id; // Identificador único de la serie
         const newRating = prompt("Califica del 1 al 5:"); // Solicita calificación
         if (newRating >= 1 && newRating <= 5) {
-            // Actualiza la interfaz con la nueva calificación
+            // Guardar calificación en LocalStorage
+            localStorage.setItem(`rating-${ratingId}`, newRating);
+            // Actualizar la interfaz
             starContainer.textContent = '★'.repeat(newRating) + '☆'.repeat(5 - newRating);
             console.log(`Guardando calificación para ${ratingId}: ${newRating}`);
-            // Aquí podrías almacenar la calificación en un archivo JSON o en un backend
         } else {
             alert("Por favor, ingresa un número entre 1 y 5.");
         }
     });
 });
 
-// Configuración de botones like/dislike
+// Configuración de botones like/dislike con persistencia
 document.querySelectorAll('.like-button, .dislike-button').forEach(button => {
+    const ratingId = button.dataset.id; // Identificador único de la serie
+    const feedbackType = button.classList.contains('like-button') ? 'like' : 'dislike';
+
+    // Cargar feedback guardado (si existe)
+    const savedFeedback = localStorage.getItem(`feedback-${ratingId}`);
+    if (savedFeedback) {
+        if (savedFeedback === 'like') {
+            document.querySelector(`[data-id="${ratingId}"].like-button`).disabled = true;
+        } else if (savedFeedback === 'dislike') {
+            document.querySelector(`[data-id="${ratingId}"].dislike-button`).disabled = true;
+        }
+    }
+
     button.addEventListener('click', () => {
-        const ratingId = button.dataset.id; // Identificador único de la serie
-        const feedback = button.classList.contains('like-button') ? 'Like' : 'Dislike';
-        console.log(`Feedback para ${ratingId}: ${feedback}`);
-        // Aquí podrías almacenar el feedback en un archivo JSON o en un backend
+        // Guardar feedback en LocalStorage
+        localStorage.setItem(`feedback-${ratingId}`, feedbackType);
+        console.log(`Feedback para ${ratingId}: ${feedbackType}`);
+
+        // Deshabilitar ambos botones
+        document.querySelector(`[data-id="${ratingId}"].like-button`).disabled = true;
+        document.querySelector(`[data-id="${ratingId}"].dislike-button`).disabled = true;
     });
 });
 
@@ -61,6 +86,6 @@ const swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
     autoplay: {
-        delay: 8000, // Cambia automáticamente cada 3 segundos
+        delay: 8000, // Cambia automáticamente cada 8 segundos
     },
 });
