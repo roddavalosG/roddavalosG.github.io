@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking de Series Favoritas</title>
-    <!-- Estilos -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Acerca de Rodrigo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,34 +30,25 @@
         li {
             margin: 10px 0;
         }
-        .rating {
-            cursor: pointer;
-            font-size: 1.2em;
-            color: gold;
+        .interests {
+            text-align: left;
+            margin-bottom: 20px;
         }
-        .swiper-container {
-            width: 100%;
-            height: 300px;
-            margin: 20px auto;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+        .interests h2 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <!-- Contenedor principal -->
     <div class="container">
-        <!-- Imagen y título -->
         <img src="imagenRodrigo.jpg" alt="Foto de Rodrigo">
         <h1>¡Hola! Mi nombre es Rodrigo</h1>
+        <div class="interests">
+            <h2>Mis Intereses</h2>
+            <p>Me interesa la <strong>estadística</strong> y la <strong>probabilidad</strong>. Actualmente, soy laboratorista en la materia de Probabilidad, una asignatura que presenta un índice de no acreditación o bajas del 50%. También me gustan las series</p>
+        </div>
         <p>Este es mi ranking de mis series favoritas.</p>
-
-        <!-- Ranking de series -->
         <h2>Ranking</h2>
-        <ul>
         <ul>
             <li>1. Breaking Bad</li>
             <li>2. Better Call Saul</li>
@@ -72,33 +61,7 @@
             <li>9. Brooklyn Nine-Nine</li>
             <li>10. Parks and Recreation</li>
         </ul>
-
-           
-
-        <!-- Carrusel de pósters -->
-        <h2>Carrusel de Pósters</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="posterBB.jpg" alt="Breaking Bad"></div>
-                <div class="swiper-slide"><img src="posterBCS.jpg" alt="Better Call Saul"></div>
-                <div class="swiper-slide"><img src="posterBH.jpg" alt="Bojack Horseman"></div>
-                <div class="swiper-slide"><img src="posterAV.jpg" alt="Avatar"></div>
-                <div class="swiper-slide"><img src="posterTB.jpg" alt="The Boys"></div>
-                <div class="swiper-slide"><img src="posterTO.jpg" alt="The Office"></div>
-                <div class="swiper-slide"><img src="posterRM.jpg" alt="Rick y Morty"></div>
-                <div class="swiper-slide"><img src="posterC.jpg" alt="Community"></div>
-                <div class="swiper-slide"><img src="posterBNN.jpg" alt="Brooklyn Nine Nine"></div>
-                <div class="swiper-slide"><img src="posterPR.jpg" alt="Parks and Recreation"></div>
-                <!-- Agrega más pósters -->
-            </div>
-            <!-- Controles del carrusel -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
