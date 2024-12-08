@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de Rodrigo</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,11 +38,15 @@
         .interests h2 {
             text-align: center;
         }
-        .interests img.inline-image {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 10px;
-            max-width: 100px; /* Ajusta el tamaño según tus necesidades */
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -51,9 +56,12 @@
         <h1>¡Hola! Mi nombre es Rodrigo</h1>
         <div class="interests">
             <h2>Mis Intereses</h2>
-            <p>Me interesa la <strong>estadística</strong> y la <strong>probabilidad</strong>. Actualmente, soy laboratorista en la materia de 
-        Probabilidad, una asignatura que presenta un índice de no acreditación o bajas del 50%. 
-        <img src="imagenEstadistica.jpg" alt="Imagen relacionada con estadística" class="inline-image"><br>También me gustan las series.</p>
+            <p>
+                Me interesa la <strong>estadística</strong> y la <strong>probabilidad</strong>. 
+                Actualmente, soy laboratorista en la materia de Probabilidad, una asignatura que presenta un índice de no acreditación o bajas del 50%. 
+                <img src="imagenEstadistica.jpg" alt="Imagen relacionada con estadística" class="inline-image"><br>
+                También me gustan las series.
+            </p>
         </div>
         <p>Este es mi ranking de mis series favoritas.</p>
         <h2>Ranking</h2>
@@ -69,7 +77,26 @@
             <li>9. Brooklyn Nine-Nine</li>
             <li>10. Parks and Recreation</li>
         </ul>
+        <h2>Carrusel de Pósters</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="posterBB.jpg" alt="Poster 1"></div>
+                <div class="swiper-slide"><img src="posterBCS.jpg" alt="Poster 2"></div>
+                <div class="swiper-slide"><img src="posterBH.jpg" alt="Poster 3"></div>
+                <div class="swiper-slide"><img src="posterBNN.jpg" alt="Poster 4"></div>
+                <div class="swiper-slide"><img src="posterC.jpg" alt="Poster 5"></div>
+                <div class="swiper-slide"><img src="posterPR.jpg" alt="Poster 6"></div>
+                <div class="swiper-slide"><img src="posterRM.jpg" alt="Poster 7"></div>
+                <div class="swiper-slide"><img src="posterTB.jpg" alt="Poster 8"></div>
+                <div class="swiper-slide"><img src="posterTO.jpg" alt="Poster 9"></div>
+                <div class="swiper-slide"><img src="posterAV.jpg" alt="Poster 10"></div>
+            </div>
+            <!-- Controles -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
