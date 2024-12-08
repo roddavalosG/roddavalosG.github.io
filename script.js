@@ -61,6 +61,6 @@ const swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
     autoplay: {
-        delay: 3000, // Cambia automáticamente cada 3 segundos
+        delay: 8000, // Cambia automáticamente cada 3 segundos
     },
 });
