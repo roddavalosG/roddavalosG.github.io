@@ -89,3 +89,4 @@ const swiper = new Swiper('.swiper-container', {
         delay: 8000, // Cambia automáticamente cada 8 segundos
     },
 });
+
