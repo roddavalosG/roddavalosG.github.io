@@ -28,56 +28,6 @@ series.forEach(serie => {
         .catch(err => console.error(`Error fetching data for ${serie.name}: ${err.message}`));
 });
 
-// Configuración de las calificaciones interactivas con persistencia
-document.querySelectorAll('.rating').forEach(starContainer => {
-    const ratingId = starContainer.dataset.id; // Identificador único de la serie
-
-    // Cargar calificación guardada (si existe)
-    const savedRating = localStorage.getItem(`rating-${ratingId}`);
-    if (savedRating) {
-        starContainer.textContent = '★'.repeat(savedRating) + '☆'.repeat(5 - savedRating);
-    }
-
-    starContainer.addEventListener('click', (event) => {
-        const newRating = prompt("Califica del 1 al 5:"); // Solicita calificación
-        if (newRating >= 1 && newRating <= 5) {
-            // Guardar calificación en LocalStorage
-            localStorage.setItem(`rating-${ratingId}`, newRating);
-            // Actualizar la interfaz
-            event.currentTarget.textContent = '★'.repeat(newRating) + '☆'.repeat(5 - newRating);
-            console.log(`Guardando calificación para ${ratingId}: ${newRating}`);
-        } else {
-            alert("Por favor, ingresa un número entre 1 y 5.");
-        }
-    });
-});
-
-// Configuración de botones like/dislike con persistencia
-document.querySelectorAll('.like-button, .dislike-button').forEach(button => {
-    const ratingId = button.dataset.id; // Identificador único de la serie
-    const feedbackType = button.classList.contains('like-button') ? 'like' : 'dislike';
-
-    // Cargar feedback guardado (si existe)
-    const savedFeedback = localStorage.getItem(`feedback-${ratingId}`);
-    if (savedFeedback) {
-        if (savedFeedback === 'like') {
-            document.querySelector(`[data-id="${ratingId}"].like-button`).disabled = true;
-        } else if (savedFeedback === 'dislike') {
-            document.querySelector(`[data-id="${ratingId}"].dislike-button`).disabled = true;
-        }
-    }
-
-    button.addEventListener('click', (event) => {
-        // Guardar feedback en LocalStorage
-        localStorage.setItem(`feedback-${ratingId}`, feedbackType);
-        console.log(`Feedback para ${ratingId}: ${feedbackType}`);
-
-        // Deshabilitar ambos botones
-        document.querySelector(`[data-id="${ratingId}"].like-button`).disabled = true;
-        document.querySelector(`[data-id="${ratingId}"].dislike-button`).disabled = true;
-    });
-});
-
 // Configuración del carrusel con Swiper.js
 const swiper = new Swiper('.swiper-container', {
     loop: true, // Hace que el carrusel sea infinito
