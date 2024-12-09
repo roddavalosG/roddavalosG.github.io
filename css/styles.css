@@ -120,3 +120,16 @@ footer .social-links i {
     color: #e0e0e0; /* Mantén el color coherente */
 }
 
+.google-form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.google-form iframe {
+    border: none;
+    width: 100%; /* Ajusta el ancho automáticamente */
+    max-width: 800px; /* Establece un máximo para el ancho */
+    height: 800px; /* Ajusta la altura según el contenido */
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Opcional: sombra para estilo */
+}
