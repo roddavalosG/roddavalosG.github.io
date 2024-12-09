@@ -47,6 +47,10 @@ const currentTheme = localStorage.getItem('theme');
 // Aplica el tema guardado al cargar la página
 if (currentTheme) {
     document.body.classList.add(currentTheme);
+} else {
+    // Aplica el tema oscuro como predeterminado si no hay configuración guardada
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark-theme');
 }
 
 // Cambia el tema al hacer clic
