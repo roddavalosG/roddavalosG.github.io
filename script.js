@@ -39,3 +39,23 @@ const swiper = new Swiper('.swiper-container', {
         delay: 8000, // Cambia automáticamente cada 8 segundos
     },
 });
+
+// Configuración del cambio de tema (oscuro/claro)
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+// Aplica el tema guardado al cargar la página
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
+}
+
+// Cambia el tema al hacer clic
+themeToggleBtn.addEventListener('click', () => {
+    if (document.body.classList.contains('dark-theme')) {
+        document.body.classList.replace('dark-theme', 'light-theme');
+        localStorage.setItem('theme', 'light-theme');
+    } else {
+        document.body.classList.replace('light-theme', 'dark-theme');
+        localStorage.setItem('theme', 'dark-theme');
+    }
+});
