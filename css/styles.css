@@ -81,3 +81,33 @@ li i {
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #f5c518;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffc107;
+}
+
+footer .social-links i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
