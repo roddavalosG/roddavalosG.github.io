@@ -69,11 +69,19 @@
             color: #f5c518;
         }
 
+        /* Imagen de estadística alineada */
+        .interests img.inline-image {
+            display: block;
+            margin: 10px auto;
+            max-width: 100px; /* Ajusta el tamaño según tus necesidades */
+        }
+
         /* Carrusel */
         .swiper-container {
             width: 100%;
             height: 300px;
             margin: 20px auto;
+            position: relative; /* Para posicionar flechas */
         }
 
         .swiper-slide img {
@@ -84,9 +92,11 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
 
-        /* Botones de navegación */
+        /* Flechas del carrusel alineadas al centro */
         .swiper-button-next, .swiper-button-prev {
             color: #f5c518;
+            top: 50%; /* Alineación vertical */
+            transform: translateY(-50%); /* Centrado */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -100,9 +110,9 @@
             <p>
                 Me interesa la <strong>estadística</strong> y la <strong>probabilidad</strong>. 
                 Actualmente, soy laboratorista en la materia de Probabilidad, una asignatura que presenta un índice de no acreditación o bajas del 50%. 
-                <img src="imagenEstadistica.jpg" alt="Imagen relacionada con estadística" class="inline-image"><br>
-                También me gustan las series.
             </p>
+            <img src="imagenEstadistica.jpg" alt="Imagen relacionada con estadística" class="inline-image">
+            <p>También me gustan las series.</p>
         </div>
         <p>Este es mi ranking de mis series favoritas.</p>
         <h2>Ranking</h2>
@@ -142,5 +152,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
