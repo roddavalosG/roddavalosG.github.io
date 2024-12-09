@@ -4,107 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de Rodrigo</title>
+    <!-- Librerías externas -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        /* Tema Oscuro */
-        body.dark-theme {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        /* Tema Claro */
-        body.light-theme {
-            background-color: #ffffff;
-            color: #333333;
-        }
-
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
-            color: #f5c518; /* Amarillo inspirado en IMDb */
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin: 10px 0;
-            font-size: 1.2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        li i {
-            margin-right: 10px;
-            color: #f5c518;
-        }
-
-        /* Botón para cambiar tema */
-        #theme-toggle {
-            margin: 10px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #f5c518;
-            color: #121212;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        #theme-toggle:hover {
-            background-color: #ffc107;
-            color: #000000;
-        }
-
-        /* Carrusel */
-        .swiper-container {
-            width: 100%;
-            height: 300px;
-            margin: 20px auto;
-            position: relative; /* Para posicionar flechas */
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .swiper-button-next, .swiper-button-prev {
-            color: #f5c518;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    </style>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -112,7 +16,7 @@
         <!-- Botón para cambiar de tema -->
         <button id="theme-toggle">Cambiar Tema</button>
 
-        <img src="imagenRodrigo.jpg" alt="Foto de Rodrigo">
+        <img src="img/imagenRodrigo.jpg" alt="Foto de Rodrigo">
         <h1>¡Hola! Mi nombre es Rodrigo</h1>
         <div class="interests">
             <h2>Mis Intereses</h2>
@@ -120,7 +24,7 @@
                 Me interesa la <strong>estadística</strong> y la <strong>probabilidad</strong>. 
                 Actualmente, soy laboratorista en la materia de Probabilidad, una asignatura que presenta un índice de no acreditación o bajas del 50%. 
             </p>
-            <img src="imagenEstadistica.jpg" alt="Imagen relacionada con estadística" class="inline-image">
+            <img src="img/imagenEstadistica.jpg" alt="Imagen relacionada con estadística" class="inline-image">
             <p>También me gustan las series.</p>
         </div>
         <p>Este es mi ranking de mis series favoritas.</p>
@@ -140,22 +44,24 @@
         <h2>Carrusel de Pósters</h2>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="posterBB.jpg" alt="Poster 1"></div>
-                <div class="swiper-slide"><img src="posterBCS.jpg" alt="Poster 2"></div>
-                <div class="swiper-slide"><img src="posterBH.jpg" alt="Poster 3"></div>
-                <div class="swiper-slide"><img src="posterBNN.jpg" alt="Poster 4"></div>
-                <div class="swiper-slide"><img src="posterC.jpg" alt="Poster 5"></div>
-                <div class="swiper-slide"><img src="posterPR.jpg" alt="Poster 6"></div>
-                <div class="swiper-slide"><img src="posterRM.jpg" alt="Poster 7"></div>
-                <div class="swiper-slide"><img src="posterTB.jpg" alt="Poster 8"></div>
-                <div class="swiper-slide"><img src="posterTO.jpg" alt="Poster 9"></div>
-                <div class="swiper-slide"><img src="posterAV.jpg" alt="Poster 10"></div>
+                <div class="swiper-slide"><img src="img/posterBB.jpg" alt="Poster 1"></div>
+                <div class="swiper-slide"><img src="img/posterBCS.jpg" alt="Poster 2"></div>
+                <div class="swiper-slide"><img src="img/posterBH.jpg" alt="Poster 3"></div>
+                <div class="swiper-slide"><img src="img/posterBNN.jpg" alt="Poster 4"></div>
+                <div class="swiper-slide"><img src="img/posterC.jpg" alt="Poster 5"></div>
+                <div class="swiper-slide"><img src="img/posterPR.jpg" alt="Poster 6"></div>
+                <div class="swiper-slide"><img src="img/posterRM.jpg" alt="Poster 7"></div>
+                <div class="swiper-slide"><img src="img/posterTB.jpg" alt="Poster 8"></div>
+                <div class="swiper-slide"><img src="img/posterTO.jpg" alt="Poster 9"></div>
+                <div class="swiper-slide"><img src="img/posterAV.jpg" alt="Poster 10"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </div>
+    <!-- Librerías externas -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Script personalizado -->
+    <script src="js/script.js"></script>
 </body>
 </html>
