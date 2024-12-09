@@ -11,7 +11,8 @@ body {
 
 h1, h2 {
     font-family: 'Playfair Display', serif;
-    color: #f5c518; /* Amarillo inspirado en IMDb */
+    color: #f5c518;
+    font-size: 2.5rem; /* Incrementa el tamaño de los encabezados */
 }
 
 .container {
@@ -22,15 +23,28 @@ h1, h2 {
 }
 
 img {
-    max-width: 150px;
+    max-width: 200px; /* Incrementa el tamaño de las imágenes */
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+.interests img.inline-image {
+    display: block;
+    margin: 20px auto; /* Ajusta el margen para centrar mejor */
+    max-width: 150px; /* Incrementa el tamaño de esta imagen */
+}
+
+.interests p {
+    font-size: 1.2rem; /* Incrementa el tamaño de las letras */
+    line-height: 1.6;  /* Mejora el espacio entre líneas */
+    text-align: justify; /* Justifica el texto */
 }
 
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Centra los elementos del ranking */
 }
 
 li {
@@ -67,5 +81,3 @@ li i {
     top: 50%;
     transform: translateY(-50%);
 }
-
-
