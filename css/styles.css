@@ -111,3 +111,12 @@ footer .social-links i {
     margin-right: 5px;
     font-size: 1.2rem;
 }
+
+/* Estilo para el texto del ranking */
+.ranking-intro {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace el texto más llamativo */
+    margin-top: 20px; /* Agrega un poco de espacio superior */
+    color: #e0e0e0; /* Mantén el color coherente */
+}
+
