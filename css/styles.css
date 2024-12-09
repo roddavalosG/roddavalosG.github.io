@@ -1,22 +1,71 @@
 /* General */
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* Tema Oscuro */
-body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #f5c518; /* Amarillo inspirado en IMDb */
 }
 
-/* Tema Claro */
-body.light-theme {
-    background-color: #ffffff;
-    color: #333333;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Otros estilos... */
+img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li i {
+    margin-right: 10px;
+    color: #f5c518;
+}
+
+/* Carrusel */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    position: relative; /* Para posicionar flechas */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #f5c518;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
